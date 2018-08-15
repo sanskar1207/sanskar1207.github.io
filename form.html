@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Table Practice App</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+</head>
+
+
+<body>
+<audio id="winner">
+    <source src="correct.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="looser">
+    <source src="wrong.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="time_counter">
+    <source src="timer.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+	<div class="container">
+		<label>Enter the Table Number</label>
+		<input type="number">
+		<div class="popup">
+			<a href="#"><button id="tablenumber_button">Start</button></a>
+			<span id="myPopup" class="popuptext">Enter a Valid Number, Press "Start" Again to Enter Number</span>
+		</div>
+	</div>
+
+
+<div class="container1">
+	<h1 id="question_number"></h1><span id="timer">00:</span><span id="timer_number">15</span>
+	<hr>
+	<h1 id="question"></h1>
+	<hr>
+		<div class="ans_container">
+			<div class="ans_row1">
+				<input type="radio" name="answer" class="radio_select" id="ans1">
+				<label for="ans1" class="ans1"></label>
+			</div>
+			<div class="ans_row2">
+				<input type="radio" name="answer" class="radio_select" id="ans2">
+				<label for="ans2" class="ans2"></label>
+			</div>
+			<div class="ans_row3">
+				<input type="radio" name="answer" class="radio_select" id="ans3">
+				<label for="ans3" class="ans3"></label>
+
+			</div>
+			<div class="ans_row4">
+				<input type="radio" name="answer" class="radio_select" id="ans4">
+				<label for="ans4" class="ans4"></label>
+			</div></div>
+	
+		
+		<button id="question_button" disabled="disabled" title="Disabled">Next Question</button>
+		<button id="answer_button" disabled="disabled" title="Disabled">Submit Answer</button>
+		<button id="skip_button" title="Enabled">Skip Question</button>
+		<button id="startagain_button" title="Enabled">Start Again</button>
+
+
+<!-- The Modal -->
+	<div id="myModal" class="modal">
+<!-- Modal content -->
+	<div class="modal-content">
+    <h2 id="question_attempted"></h2>
+    <h2 id="correct_question"></h2>
+    <h2 id="incorrect_question"></h2>
+    <h2 id="success"></h2>
+    <span class="close"><button>Close</button></span>
+  
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="script1.js"></script>
+</body>
